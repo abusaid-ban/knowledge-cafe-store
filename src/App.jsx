@@ -1,16 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
+import Header from './Components/Header/Header'
+import Blog from './Components/Blog/Blog'
+import SideCart from './Components/SideCart/SideCart'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-     
+    <div>
+      <div className="App">
+     <Header></Header>
+    </div>
+    <div className="main">
+      <div className="blog-container">
+        <Blog></Blog>
+      </div>
+      <div className="side-cart">
+        <SideCart></SideCart>
+      </div>
+    </div>
     </div>
   )
 }
 
-export default App
+export default App; 

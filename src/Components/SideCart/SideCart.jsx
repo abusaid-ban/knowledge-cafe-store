@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './SideCart.css';
 
-const SideCart = () => {
+const SideCart = ({readTime}) => {
+    const [time,setTime] = useState(readTime);
+    useEffect(()=>{
+        const getReadTime = localStorage.getItem("readTime")
+        setTime(getReadTime);
+
+    },[readTime])
     return (
-        <div className='card'>
-            This is side cart
+        <div>
+           <h5>Spend time on read:{time}min</h5>
         </div>
     );
 };

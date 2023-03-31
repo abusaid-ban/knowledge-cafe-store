@@ -5,16 +5,19 @@ import Blog from './Components/Blog/Blog'
 import SideCart from './Components/SideCart/SideCart'
 
 function App() {
+  const handleBookmark =(time)=>{
+    console.log(time);
+  }
   return (
     <div>
       <div className="App">
      <Header></Header>
     </div>
-    <div className="main container">
-      <div className="home-container">
-        <Blog></Blog>
+    <div className="main container ">
+      <div className="home-container ">
+        <Blog handleBookmark={handleBookmark}></Blog>
       </div>
-      <div className="side-cart">
+      <div className="side-cart ">
         <SideCart></SideCart>
       </div>
     </div>

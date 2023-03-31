@@ -5,3 +5,6 @@
     position: relative;
     left: 0;
 }
+ .blog-card a:hover{
+    color: orange;
+}

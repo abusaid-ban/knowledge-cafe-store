@@ -10,8 +10,8 @@ function App() {
       <div className="App">
      <Header></Header>
     </div>
-    <div className="main">
-      <div className="blog-container">
+    <div className="main container">
+      <div className="home-container">
         <Blog></Blog>
       </div>
       <div className="side-cart">

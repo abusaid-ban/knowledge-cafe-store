@@ -3,7 +3,7 @@ import './SideCart.css';
 
 const SideCart = () => {
     return (
-        <div>
+        <div className='card'>
             This is side cart
         </div>
     );

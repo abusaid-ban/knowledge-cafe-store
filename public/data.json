@@ -1,0 +1,42 @@
+[
+    {
+      "id": "6425d39450470466f5507501",
+      "authorName": "Glenn Valentine",
+      "blogTitle": "How to get your first job as a self-taught programmer",
+      "coverImage": "https://images.unsplash.com/photo-1511122242484-7396b11888dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mnw0NTEwNTEzfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
+      "authorImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYAvaAxsvnsLCH2tnm74b3Ng_-GZlMZXoDjA&usqp=CAU",
+      "readTime": 5,
+      "publishDate": "mar 14 (4 days ago)"
+      
+    },
+    {
+      "id": "6425d39450470466f5507502",
+      "authorName": "David Warner",
+      "blogTitle": "How to get your first job as a self-taught programmer",
+      "coverImage": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZ3JhbW1pbmclMjBjb2RlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60",
+      "authorImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHW0m3BJlgaldZnZAHuK5Oc80dvafjQZRHzg&usqp=CAU",
+      "readTime": 10,
+      "publishDate": "mar 14 (4 days ago)"
+      
+    },
+    {
+      "id": "6425d39450470466f5507503",
+      "authorName": " Quinton De cock",
+      "blogTitle": "How to get your first job as a self-taught programmer",
+      "coverImage": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGxhcHRvcHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60",
+      "authorImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-VTkvvi3P4QQVG2Rn87BBKVbNlwslj2bQew&usqp=CAU",
+      "readTime": 12,
+      "publishDate": "mar 14 (4 days ago)"
+      
+    },
+    {
+      "id": "6425d39450470466f5507504",
+      "authorName": "Joss Butler",
+      "blogTitle": "How to get your first job as a self-taught programmer",
+      "coverImage": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGNvZGluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60",
+      "authorImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo-EbQX0DlFYswxfC8cU51jnmQkHkAmhZ7wg&usqp=CAU",
+      "readTime": 14,
+      "publishDate": "mar 14 (4 days ago)"
+      
+    }
+  ]

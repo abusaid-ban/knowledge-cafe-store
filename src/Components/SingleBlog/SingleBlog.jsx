@@ -9,7 +9,7 @@ const SingleBlog = ({blog,handleBookmark}) => {
     return (
         <div className="blog-card card  w-100 m-auto col-md-6">
             <div className="blog-image w-100">
-                <img className='w-100 ' src=
+                <img className="w-100 h-75" src=
                     {blog.coverImage} alt="" />
             </div>
             <div className="authorDetailsAndReadTime  d-flex justify-content-between m-3">
@@ -20,10 +20,10 @@ const SingleBlog = ({blog,handleBookmark}) => {
                         <p>{blog.publishDate}</p>
                     </div>
                 </div>
-                <p>{blog.readTime} min read   <button onClick={()=>handleBookmark(blog.readTime)}> <FontAwesomeIcon icon={faBookmark} /> </button></p>
+                <p>{blog.readTime} min read   <button > <FontAwesomeIcon icon={faBookmark} /> </button></p>
             </div>
             <h2 className='fw-800'>{blog.blogTitle}</h2>
-            <a href="">Mark as Read</a>
+            <a onClick={()=>handleBookmark(blog.readTime)} href="">Mark as Read</a>
         </div>
 
     );

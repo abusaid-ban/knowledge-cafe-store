@@ -3,10 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 import './SingleBlog.css';
 
+
 const SingleBlog = (props) => {
     const {coverImage,authorImage,authorName,publishDate,readTime,blogTitle}= props.blog;
  const handleMarkReadToCart = props.handleMarkReadToCart;
  const handleBookMarkBtn=props.handleBookMarkBtn;
+
     
     return (
         <div className="blog-card card mb-2 w-100 m-auto ">

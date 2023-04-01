@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import QNA from '../QNA/QNA';
 import SingleBlog from '../SingleBlog/SingleBlog';
+import { ToastContainer, toast } from 'react-toastify';
 import './Blog.css';
 
 
@@ -10,6 +11,7 @@ const Blog = () => {
     const [carts, setCarts] = useState([]);
 
 
+
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
@@ -17,8 +19,19 @@ const Blog = () => {
     }, []);
     const handleBookMarkBtn = (blog) => {
         const newCart = [...carts, blog];
-         setCarts(newCart);
-    }
+        // setCarts(newCart);
+        // console.log(blog);
+        const exist = carts.find(b => b.id === blog.id);
+        if (exist) {
+             toast.error("Already have BookMark", { theme: "colored" });
+        }
+        else{
+             toast.success("Added as BookMark",{theme:"colored"})
+             setCarts(newCart);
+            }
+    };
+       
+       
 
     const [readTime, setReadTime] = useState(0);
 
@@ -46,7 +59,7 @@ const Blog = () => {
                         handleBookMarkBtn={handleBookMarkBtn}
                     ></SingleBlog>)
                 }
-               <QNA></QNA>
+                <QNA></QNA>
             </div>
             <div className="side-cart">
                 <div className='sideCard card'>
@@ -56,7 +69,7 @@ const Blog = () => {
                 <div className='bookmark-blog card '>
                     <h3 className='fw-800 bolder '>Bookmarked Blogs:{carts.length}</h3>
                     <ul >
-                        {carts.map((cart,index) => (
+                        {carts.map((cart, index) => (
                             <li className='card mb-3 fs-5' key={index}>{cart.blogTitle}</li>
                         ))}
                     </ul>

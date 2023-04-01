@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import QNA from '../QNA/QNA';
-
 import SingleBlog from '../SingleBlog/SingleBlog';
 import './Blog.css';
 

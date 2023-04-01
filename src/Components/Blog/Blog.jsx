@@ -52,11 +52,11 @@ const Blog = () => {
                     <h4>Spend time on read:{readTime}min</h4>
 
                 </div>
-                <div className='card'>
-                    <h3 className='fw-800 bold'>Bookmarked Blogs:{carts.length}</h3>
+                <div className='bookmark-blog card '>
+                    <h3 className='fw-800 bolder '>Bookmarked Blogs:{carts.length}</h3>
                     <ul >
                         {carts.map((cart,index) => (
-                            <li className='card' key={index}>{cart.blogTitle}</li>
+                            <li className='card mb-3 fs-5' key={index}>{cart.blogTitle}</li>
                         ))}
                     </ul>
 

@@ -3,6 +3,13 @@
     
 }
 .sideCard h4{
-   font-weight: bold;
+   font-weight: semibold;
     color: blueviolet;
+}
+.bookmark-blog{
+    background-color: grey;
+}
+.bookmark-blog h3{
+ color: black;
+ font-size: x-large;
 }

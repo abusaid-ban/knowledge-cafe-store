@@ -6,6 +6,7 @@ import './SingleBlog.css';
 const SingleBlog = (props) => {
     const {coverImage,authorImage,authorName,publishDate,readTime,blogTitle}= props.blog;
  const handleMarkReadToCart = props.handleMarkReadToCart;
+ const handleBookMarkBtn=props.handleBookMarkBtn;
     
     return (
         <div className="blog-card card  w-100 m-auto col-md-6">
@@ -22,7 +23,7 @@ const SingleBlog = (props) => {
                     </div>
                 </div>
                 <p>{readTime} min read   <button
-               
+               onClick={()=>handleBookMarkBtn(props.blog)}
                  > <FontAwesomeIcon icon={faBookmark} /> </button></p>
             </div>
             <h2 className='fw-800'>{blogTitle}</h2>

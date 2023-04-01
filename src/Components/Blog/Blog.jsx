@@ -6,6 +6,7 @@ import './Blog.css';
 
 const Blog = () => {
     const [blogs, setBlogs] = useState([]);
+    const [cart,setCart]=useState([]);
    
 
     useEffect(() => {
@@ -13,6 +14,10 @@ const Blog = () => {
             .then(res => res.json())
             .then(data => setBlogs(data));
     }, []);
+    const handleBookMarkBtn  =(blog)=>{
+        const newCart = [...cart,blog]
+        setCart(newCart);
+    }
  
     const [readTime, setReadTime] = useState(0);
 
@@ -37,6 +42,7 @@ const Blog = () => {
                         key={blog.id}
                         blog={blog}
                         handleMarkReadToCart={handleMarkReadToCart}
+                        handleBookMarkBtn={handleBookMarkBtn}
                     ></SingleBlog>)
                 }
             </div>
@@ -46,7 +52,7 @@ const Blog = () => {
                     
                 </div>
                 <div className='card'>
-                    <h3 className='fw-800 bold'>Bookmarked Blogs:{}</h3>
+                    <h3 className='fw-800 bold'>Bookmarked Blogs:{cart.length}</h3>
                 </div>
             </div>
 

@@ -26,7 +26,7 @@ const SingleBlog = (props) => {
                  > <FontAwesomeIcon icon={faBookmark} /> </button></p>
             </div>
             <h2 className='fw-800'>{blogTitle}</h2>
-            <a onClick={()=>handleMarkReadToCart(props.blog)} href="#">Mark as Read</a>
+            <a onClick={()=>handleMarkReadToCart(readTime)} href="#">Mark as Read</a>
         </div>
 
     );

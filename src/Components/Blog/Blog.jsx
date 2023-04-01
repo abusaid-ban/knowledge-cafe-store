@@ -6,17 +6,28 @@ import './Blog.css';
 
 const Blog = () => {
     const [blogs, setBlogs] = useState([]);
-    const [cart, setCart] = useState([])
+   
 
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setBlogs(data));
     }, []);
-    const handleMarkReadToCart = (blog) => {
-        const newCart = [...cart, blog];
-        setCart(newCart);
-    }
+ 
+    const [readTime, setReadTime] = useState(0);
+
+    const handleMarkReadToCart = (readTime) => {
+      const previousReadTime = JSON.parse(localStorage.getItem("ReadTime"));
+      if (previousReadTime) {
+        const sum = previousReadTime + readTime;
+        localStorage.setItem("ReadTime", sum);
+        setReadTime(sum);
+      } else {
+        localStorage.setItem("ReadTime", readTime);
+        setReadTime(readTime);
+      }
+    };
+    
 
     return (
         <div className='main container'>
@@ -31,11 +42,11 @@ const Blog = () => {
             </div>
             <div className="side-cart ">
                 <div className='sideCard card'>
-                    <h4>Spend time on read:{cart.length }min</h4>
+                    <h4>Spend time on read:{readTime}min</h4>
                     
                 </div>
                 <div className='card'>
-                    <h3 className='fw-800 bold'>Bookmarked Blogs:{ }</h3>
+                    <h3 className='fw-800 bold'>Bookmarked Blogs:{}</h3>
                 </div>
             </div>
 

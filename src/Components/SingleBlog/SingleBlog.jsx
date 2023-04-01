@@ -9,7 +9,7 @@ const SingleBlog = (props) => {
  const handleBookMarkBtn=props.handleBookMarkBtn;
     
     return (
-        <div className="blog-card card  w-100 m-auto col-md-6">
+        <div className="blog-card card mb-2 w-100 m-auto col-md-6">
             <div className="blog-image w-100">
                 <img className="w-100 h-75" src=
                     {coverImage} alt="" />

@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import QNA from '../QNA/QNA';
+
 import SingleBlog from '../SingleBlog/SingleBlog';
 import './Blog.css';
 
@@ -16,8 +18,7 @@ const Blog = () => {
     }, []);
     const handleBookMarkBtn = (blog) => {
         const newCart = [...carts, blog];
-        // console.log(cart[1].blogTitle);
-        setCarts(newCart);
+         setCarts(newCart);
     }
 
     const [readTime, setReadTime] = useState(0);
@@ -46,6 +47,7 @@ const Blog = () => {
                         handleBookMarkBtn={handleBookMarkBtn}
                     ></SingleBlog>)
                 }
+               <QNA></QNA>
             </div>
             <div className="side-cart ">
                 <div className='sideCard card'>

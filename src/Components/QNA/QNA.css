@@ -1,0 +1,13 @@
+.card h1{
+    text-align: center;
+    background-color: bisque;
+    color: crimson;
+    padding: 10px;
+    
+}
+.card h3{
+    background-color: blanchedalmond;
+}
+.card span{
+    background-color: cornflowerblue;
+}

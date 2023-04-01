@@ -6,33 +6,34 @@ import './Blog.css';
 
 const Blog = () => {
     const [blogs, setBlogs] = useState([]);
-    const [cart,setCart]=useState([]);
-   
+    const [carts, setCarts] = useState([]);
+
 
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setBlogs(data));
     }, []);
-    const handleBookMarkBtn  =(blog)=>{
-        const newCart = [...cart,blog]
-        setCart(newCart);
+    const handleBookMarkBtn = (blog) => {
+        const newCart = [...carts, blog];
+        // console.log(cart[1].blogTitle);
+        setCarts(newCart);
     }
- 
+
     const [readTime, setReadTime] = useState(0);
 
     const handleMarkReadToCart = (readTime) => {
-      const previousReadTime = JSON.parse(localStorage.getItem("ReadTime"));
-      if (previousReadTime) {
-        const sum = previousReadTime + readTime;
-        localStorage.setItem("ReadTime", sum);
-        setReadTime(sum);
-      } else {
-        localStorage.setItem("ReadTime", readTime);
-        setReadTime(readTime);
-      }
+        const previousReadTime = JSON.parse(localStorage.getItem("ReadTime"));
+        if (previousReadTime) {
+            const sum = previousReadTime + readTime;
+            localStorage.setItem("ReadTime", sum);
+            setReadTime(sum);
+        } else {
+            localStorage.setItem("ReadTime", readTime);
+            setReadTime(readTime);
+        }
     };
-    
+
 
     return (
         <div className='main container'>
@@ -49,10 +50,16 @@ const Blog = () => {
             <div className="side-cart ">
                 <div className='sideCard card'>
                     <h4>Spend time on read:{readTime}min</h4>
-                    
+
                 </div>
                 <div className='card'>
-                    <h3 className='fw-800 bold'>Bookmarked Blogs:{cart.length}</h3>
+                    <h3 className='fw-800 bold'>Bookmarked Blogs:{carts.length}</h3>
+                    <ul >
+                        {carts.map((cart,index) => (
+                            <li className='card' key={index}>{cart.blogTitle}</li>
+                        ))}
+                    </ul>
+
                 </div>
             </div>
 

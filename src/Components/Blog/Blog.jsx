@@ -36,7 +36,7 @@ const Blog = () => {
 
 
     return (
-        <div className='main container'>
+        <div className='main container '>
             <div className="blog-container">
                 {
                     blogs.map(blog => <SingleBlog
@@ -48,7 +48,7 @@ const Blog = () => {
                 }
                <QNA></QNA>
             </div>
-            <div className="side-cart ">
+            <div className="side-cart">
                 <div className='sideCard card'>
                     <h4>Spend time on read:{readTime}min</h4>
 

@@ -1,16 +1,35 @@
-.main{
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    
+.main {
+
+    display: flex;
+
 }
-.sideCard h4{
-   font-weight: semibold;
+
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+    }
+}
+
+.sideCard h4 {
+    font-weight: semibold;
     color: blueviolet;
 }
-.bookmark-blog{
+
+.bookmark-blog {
     background-color: grey;
 }
-.bookmark-blog h3{
- color: black;
- font-size: x-large;
+
+.bookmark-blog h3 {
+    color: black;
+    font-size: x-large;
+}
+
+.blog-container {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.side-Cart {
+    width: 25%;
+    margin: 0 auto;
 }
